@@ -3,17 +3,49 @@
 <html lang="es">
 	<head>
 		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width"/> <!--Para que se adapte al ancho del dispositivo -->
 		<title>Barbería Alura</title>
-		<link rel="stylesheet" href="style-home.css">
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+<!-- Para las fuentes:
+1. Buscar Google fonts e ingresar
+2. Seleccionar una fuente
+3. A la derecha aparece un menú: seleccionar link
+4. Copiar el link y pegarlo en el head
+5. Volver a Google Fonts y copiar el texto de CSS Rules to specify families
+6. Pegar en el CSS, en este ejemplo en body{}
+-->
+
 	</head>
 	<body>
 		<header>
-			<h1 class="titulo-principal">Barbería Alura</h1>
-		</header>
-		<img src="banner/banner.jpg" id="banner"/>
+            <div class="caja">
+                <h1><img src="imagenes/logo.png" alt="Logo de la Barbería Alura"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-		<div class="principal">
-			<h2 class="titulo-centralizado">Sobre la Barbería Alura</h2>
+		<img src="banner/banner.jpg" class="banner"/>
+
+		<main>
+			<!-- Ejemplos de selectores avanzados-->
+			<!--
+			<p>Párrafo de ejemplo</p>
+			-->
+
+		<section class="principal">
+			<h2 class="titulo-principal">Sobre la Barbería Alura</h2>
+			<img src="imagenes/utensilios.jpeg" alt="Utensilios de un barbero" class="utensilios"/>
 			<p>
 				Ubicada en el corazón de la ciudad, la <strong> Barbería Alura</strong> trae para el mercado lo que hay de mejor para su cabello y barba. Fundada en 2020, la Barbería Alura ya es destaque en la ciudad y conquista nuevos clientes diariamente. 
 			</p>
@@ -25,21 +57,60 @@
 				Ofrecemos profesionales experimentados que están constantemente observando los cambios y movimiento en el mundo de la moda, para así ofrecer a nuestros clientes las últimas tendencias. El atendimiento posee un padrón de excelencia y agilidad, garantizando calidad y satisfacción de nuestros clientes. 
 			</p>
 
-		</div>
+		</section>
+		<!--
+			Para importar un mapa:
+			1. Ir a Google Maps y buscar el mapa 
+			2. Ir al menú (a la izquierda) y seleccionar "Compartir o insertar el mapa"
+			3. Seleccionar "Insertar un mapa"
+			4. Seleccionar el tamaño (mediano en este caso) y copiar html
+			5. Pegarlo en el hmtl
 
-		<div class="diferenciales">
-			<h3 class="titulo-centralizado">Diferenciales</h3>
-			<ul>
-				<li class="items">Atención personalizada a los clientes</li>
-				<li class="items">Espacio diferenciado</li>
-				<li class="items">Localización</li> 
-				<li class="items">Profesionales calificados</li> 
-			</ul>
-			<img src="diferenciales/diferenciales.jpg" class="imagenDiferenciales"/>
+		-->
+		<section class="mapa">
+			<h3 class="titulo-principal">Nuestra ubicación</h3>
+			<p>Nuestro establecimiento está ubicado en el corazón de la ciudad.</p>
+			<div class="mapa-contenido">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9572.794603882412!2d-70.8996461!3d-53.1425293!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc52ca58b309cc21%3A0xfa616a8b65456916!2sPunta%20Arenas%2C%20Magallanes%20y%20la%20Ant%C3%A1rtica%20Chilena!5e0!3m2!1ses!2scl!4v1663992153226!5m2!1ses!2scl" 
+			width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</section>
+
+		<section class="diferenciales">
+			<h3 class="titulo-principal">Diferenciales</h3>
+			<div class="contenido-diferenciales">
+				<ul class="lista-diferenciales">
+					<li class="items">Atención personalizada a los clientes</li>
+					<li class="items">Espacio diferenciado</li>
+					<li class="items">Localización</li> 
+					<li class="items">Profesionales calificados</li> 
+					<li class="items">Puntualidad</li>
+					<li class="items">Limpieza</li>
+				</ul><img src="diferenciales/diferenciales.jpg" class="imagen-diferenciales"/>
+				<!-- Hay que juntar el ul con el img para que funcione el display:inline block en el CSS-->
+			</div>
+			<!--
+			Importar un video:
+			1. Ir al video (YouTube u otro)
+			2. Compartir (debajo del video)
+			3. Insertar <>
+			4. Se puede configurar en donde empezar (opcional)
+			5. copiar
+			6. Pegar en el html
+
+		-->
+		<div class="video">
+			<iframe width="100%" height="315" src="https://www.youtube.com/embed/wHZzYrUOHyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
+		</section>
+
 		
 		
-
+	</main>
+	<footer>
+            <img src="imagenes/logo-blanco.png" alt="Logo de la Barbería Alura">
+            <p class="copyright">&copy Copyright Barbería Alura - 2022</p>
+    </footer>
 
 	</body>
 </html>
